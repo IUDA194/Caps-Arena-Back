@@ -76,7 +76,7 @@ def open_case(request):
                 can_drop = []
                 for item in list(map(str, selected_case.case_drop.split(";"))):
                     can_drop.append(item)
-                drop = can_drop[randint(0, len(can_drop))]
+                drop = can_drop[randint(0, len(can_drop) - 1)]
                 new_chip = chip.objects.create(
                     user_id = user_id,
                     chip_id = drop,
