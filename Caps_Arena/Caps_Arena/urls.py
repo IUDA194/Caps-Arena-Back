@@ -17,11 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from user import views as user_views
-
+from cases import views as cases_views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
 ]
 urlpatterns = [
     path('login_user/', user_views.user_create),
+    path('create_new_chip/', cases_views.create_new_chip),
+    path('craete_case/', cases_views.add_case),
+    path('open_case/', cases_views.open_case),
+    path('get_inventory/', cases_views.get_inventory)
 ]

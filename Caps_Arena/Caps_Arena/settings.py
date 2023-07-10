@@ -26,7 +26,15 @@ SECRET_KEY = 'django-insecure-lw92rut@y0y3%mu10h!x+l4y*zo*q0%74xhf_7qu2ec%&7$#m@
 DEBUG = True
 
 ALLOWED_HOSTS = ["185.107.237.179", "127.0.0.1"]
-
+CORS_REPLACE_HTTPS_REFERER      = False
+HOST_SCHEME                     = "http://"
+SECURE_PROXY_SSL_HEADER         = None
+SECURE_SSL_REDIRECT             = False
+SESSION_COOKIE_SECURE           = False
+CSRF_COOKIE_SECURE              = False
+SECURE_HSTS_SECONDS             = None
+SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
+SECURE_FRAME_DENY               = False
 
 # Application definition
 
@@ -37,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'user'
+    'user',
+    'cases'
 ]
 
 MIDDLEWARE = [
